@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  background-color: #262626;
+  color: #d9d9d9;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 352px;
+  height: 66px;
+}
+
+header > h1 {
+  color: #f9f4da;
+  font-weight: 500;
+  font-size: 20px;
+  height: 26px;
+}
+
+header > p {
+  color: #8e8e8e;
+  font-weight: 500;
+  font-size: 14px;
+  height: 36px;
+  margin-top: -12px;
+}
+
+.status-section {
+  width: 352px;
+  height: 59px;
+  color: #f9f4da;
+  border-radius: 4px;
+  padding: 6px 0;
+  margin-block: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-section.won {
+  background-color: #10a95b;
+}
+
+.status-section.lost {
+  background-color: #ba2a2a;
+}
+
+.status-section.farewell {
+  background-color: #7a5ea7;
+  border: 1px dashed #323232;
+}
+
+.status-section > h2 {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+}
+
+.status-section > p {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
+}
+
+.status-section.farewell > p {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.languages-section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 350px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4px;
+  margin-block: 20px;
+}
+
+span.chip {
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 4.5px;
+  position: relative;
+}
+
+span.chip.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.current-word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  background-color: #323232;
+  margin-top: 20px;
+}
+
+.current-word > span {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #f9f4da;
+  border-bottom: 1px solid #f9f4da;
+}
+
+.current-word > span.missed-letter {
+  color: #ec5d49;
+}
+
+.keyboard {
+  width: 480px;
+  height: 136px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.keyboard > button {
+  height: 40px;
+  width: 40px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e1e1e;
+  background-color: #fcba29;
+  cursor: pointer;
+}
+
+.keyboard > button.correct {
+  background-color: #10a95b;
+}
+
+.keyboard > button.incorrect {
+  background-color: #ec5d49;
+}
+
+.keyboard > button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.new-game-btn {
+  width: 228px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e1e1e;
+  background-color: #11b5e5;
+  cursor: pointer;
+}

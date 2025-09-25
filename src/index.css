@@ -139,7 +139,7 @@ span.chip.lost::before {
 }
 
 .keyboard {
-  width: 480px;
+  max-width: 480px;
   height: 136px;
   margin-top: 15px;
   display: flex;

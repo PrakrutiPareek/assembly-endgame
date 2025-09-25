@@ -188,3 +188,9 @@ span.chip.lost::before {
   background-color: #11b5e5;
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+  .new-game-btn {
+    margin-top: 70px;
+  }
+}
